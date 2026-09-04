@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ocean — FFT</title>
+  <style>
+    :root { color-scheme: dark; }
+    html, body { margin: 0; height: 100%; background: #05070c; overflow: hidden; }
+    #scene { display: block; width: 100vw; height: 100vh; }
+    #hud {
+      position: fixed; left: 14px; bottom: 12px;
+      font: 11px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: rgba(255,255,255,.42); letter-spacing: .04em;
+      pointer-events: none; text-shadow: 0 1px 3px rgba(0,0,0,.7);
+    }
+    #warn {
+      display: none; position: fixed; inset: 0; place-content: center;
+      font: 14px system-ui; color: #ddd; background: #05070c; text-align: center;
+      padding: 3rem;
+    }
+    .lil-gui { --width: 300px; font-size: 11px; }
+  </style>
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <div id="hud"></div>
+  <div id="warn">Dieser Browser hat kein WebGL2 — die FFT-Simulation braucht es.</div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
